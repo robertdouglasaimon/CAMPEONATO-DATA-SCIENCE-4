@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+body {
+  font-family: "Roboto", sans-serif; /* Aplicando a fonte Roboto */
+}
+.sidebar {
+  width: 200px; /* Largura da barra lateral */
+  background-color: #eee; /* Cor de fundo */
+  padding: 20px; /* Espaçamento interno */
+  height: 100vh; /* Altura total da viewport */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+.navbar {
+  background-color: white;
+  transition: background-color 0.3s;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.navbar-item {
+  padding: 5px 10px; /* Ajuste o padding conforme necessário */
+  margin: 5px;
+  border-radius: 5px;
+}
+.navbar.scrolled {
+  background-color: #e3e9dc;
+}
+.navbar .container {
+  max-width: 1280px;
+}
+main {
+  /* Removendo padding */
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.swiper-container {
+  height: 600px; /* Define a altura do Swiper */
+  width: 100%; /* Faz o Swiper ocupar 100% da largura */
+  background-color: white; /* Fundo preto para o Swiper */
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Garantindo a altura do slide */
+  /*overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse */
+}
+.swiper-slide img {
+  width: 100%; /* Faz a imagem ocupar 100% da largura */
+  height: 100%; /* Faz a imagem ocupar 100% da altura */
+  object-fit: cover; /* Corta a imagem para preencher o espaço */
+}
+/* Centralizando os botões */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff; /* Cor dos botões */
+  width: 50px; /* Largura dos botões */
+  height: 50px; /* Altura dos botões */
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%); /* Ajuste para centralização exata */
+}
+.swiper-button-next {
+  top: 370px;
+  right: 10px; /* Distância da borda direita */
+}
+.swiper-button-prev {
+  top: 370px;
+  left: 10px; /* Distância da borda esquerda */
+}
+.footer {
+  background-color: #e3e9dc; /* Cor de fundo do footer */
+  padding-top: 50px; /* Adiciona um espaçamento interno */
+  padding-bottom: 70px;
+}
+.content-container {
+  max-width: 1280px; /* Tamanho máximo */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  display: flex; /* Ativa o flexbox */
+  padding: 20px; /* Adiciona espaçamento */
+}
+.content-left {
+  flex: 0 0 70%; /* Largura de 70% */
+  padding-right: 50px; /* Espaçamento à direita */
+  margin-top: 70px;
+}
+
+.content-right {
+  flex: 0 0 30%; /* Largura de 30% */
+  margin-top: 70px;
+}
+section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+p {
+  font-size: 13.5pt;
+}
