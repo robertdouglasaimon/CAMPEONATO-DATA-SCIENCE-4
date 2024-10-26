@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 body {
   font-family: "Roboto", sans-serif; /* Aplicando a fonte Roboto */
 }
@@ -16,16 +14,38 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 .navbar-item {
+  position: relative;
   padding: 5px 10px; /* Ajuste o padding conforme necessário */
   margin: 5px;
   border-radius: 5px;
+  color: black; /* Cor do texto */
 }
 .navbar.scrolled {
-  background-color: #e3e9dc;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .navbar .container {
   max-width: 1280px;
+}
+.navbar-item:hover {
+  background-color: transparent; /* Remove alteração de fundo */
+  font-weight: bold; /* Fica em negrito ao passar o mouse */
+}
+.navbar-item:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px; /* Altura da linha */
+  background: black; /* Cor da linha */
+  bottom: 0; /* Posiciona a linha na parte inferior */
+  left: 0;
+}
+/* Remover fundo ao passar o mouse */
+.navbar-item.is-active,
+.navbar-item.is-active:hover {
+  background-color: transparent; /* Fundo transparente */
 }
 main {
   /* Removendo padding */
@@ -42,7 +62,6 @@ main {
   justify-content: center;
   align-items: center;
   height: 100%; /* Garantindo a altura do slide */
-  /*overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse */
 }
 .swiper-slide img {
   width: 100%; /* Faz a imagem ocupar 100% da largura */
@@ -59,11 +78,9 @@ main {
   transform: translateY(-50%); /* Ajuste para centralização exata */
 }
 .swiper-button-next {
-  top: 370px;
   right: 10px; /* Distância da borda direita */
 }
 .swiper-button-prev {
-  top: 370px;
   left: 10px; /* Distância da borda esquerda */
 }
 .footer {
@@ -93,4 +110,42 @@ section {
 }
 p {
   font-size: 13.5pt;
+}
+.hover-link {
+  color: #777; /* Cor inicial */
+  transition: color 0.3s; /* Animação suave */
+}
+.hover-link:hover {
+  color: #3273dc; /* Cor ao passar o mouse */
+}
+.custom-divider {
+  border: none; /* Remove a borda padrão */
+  border-top: 1px solid #d3d3d3; /* Cor cinza claro */
+  margin: 1rem 0; /* Espaçamento vertical */
+}
+.navbar-link.is-active,
+.navbar-link:focus,
+.navbar-link:focus-within,
+.navbar-link:hover,
+a.navbar-item.is-active,
+a.navbar-item:focus,
+a.navbar-item:focus-within,
+a.navbar-item:hover {
+  background-color: #fff;
+  color: #485fc7;
+}
+.a.navbar-item:focus {
+  background-color: red !important;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-item:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+  }
 }
